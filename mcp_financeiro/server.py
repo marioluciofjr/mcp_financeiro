@@ -56,7 +56,7 @@ def saude_financeira(
     ) -> str:
 	"""
 	Prompt para acionar a tool 'grana_ideal' e, a partir disso, fazer uma análise da saúde financeira. O 
-    argumento 'gastos_totais' é o valor total que a pessoa gasta no mês, 'horas_mes' é a quantidade de horas que a
+    	argumento 'gastos_totais' é o valor total que a pessoa gasta no mês, 'horas_mes' é a quantidade de horas que a
 	pessoa trabalha no mês, 'receita_real' é a média de quanto a pessoa ganha por mês, 'perfil_de_investimento' é o
 	perfil de investimento da pessoa (conservador, moderado ou arrojado), 'trabalho' é o que a pessoa faz para ganhar dinheiro e
 	'hobby' é o que a pessoa costuma fazer para se entreter.
@@ -68,7 +68,7 @@ def saude_financeira(
 	<função>
 	Você atuará como um profissional de finanças experiente, que sabe analisar diversos cenários econômicos. 
 	Você tem especialização em finanças comportamentais, tem consciência de classe e é capaz de entender o contexto social e econômico.
-    Você é objetivo, mas didático e respeitoso. Você evita jargões financeiros e explica termos técnicos de forma simples.
+        Você é objetivo, mas didático e respeitoso. Você evita jargões financeiros e explica termos técnicos de forma simples.
 	</função>
 
 	<contexto>
@@ -76,56 +76,55 @@ def saude_financeira(
 	</contexto>
 
 	<tarefa>
-    ## Distribuição ideal
+        ## Distribuição ideal
     
-    Chame a tool 'grana_ideal' e print o resultado dela.
+        Chame a tool 'grana_ideal' e print o resultado dela.
     
-    Em seguida, envie a seguinte mensagem:
-    "Sua receita real é de R$ {round(receita_real, 2)}, sendo que sua receita ideal deveria ser de R$ {round(receita_ideal, 2)}. 
-    Ou seja, atualmente você ganha {(receita_real/receita_ideal)* 100:.2f}% do que deveria ganhar."
+        Em seguida, envie a seguinte mensagem:
+        "Sua receita real é de R$ {round(receita_real, 2)}, sendo que sua receita ideal deveria ser de R$ {round(receita_ideal, 2)}. 
+        Ou seja, atualmente você ganha {(receita_real/receita_ideal)* 100:.2f}% do que deveria ganhar."
     
 	## Avaliação da saúde financeira 
 
-    <regra>
-    Respeite as condicionantes abaixo para classificar a saúde financeira da pessoa e dar dicas financeiras.
-    </regra>   
+        <regra>
+        Respeite as condicionantes abaixo para classificar a saúde financeira da pessoa e dar dicas financeiras.
+        </regra>   
 
 	Se o valor da receita real (R$ {receita_real}) for menor ou igual aos gastos totais (R$ {gastos_totais}), dê apenas 5 dicas 
 	de como a pessoa pode enxugar gastos e renegociar dívidas. Formato de saída será de até 100 palavras. Finalize em seguida com o disclaimer.
 
 	Se o valor da receita real (R$ {receita_real}) for maior que os gastos totais e ficar abaixo de 25%
 	da receita ideal de R$ {round(receita_ideal, 2)}), 
-    classifique a saúde financeira como péssima e dê 5 dicas de como a pessoa pode aumentar a receita. Formato de saída será de até 100 palavras. Finalize em seguida com o disclaimer.
+        classifique a saúde financeira como péssima e dê 5 dicas de como a pessoa pode aumentar a receita. Formato de saída será de até 100 palavras. Finalize em seguida com o disclaimer.
 
-    Se o valor da receita real (R$ {receita_real}) for maior que os gastos totais e ficar entre 25% e 50%
+        Se o valor da receita real (R$ {receita_real}) for maior que os gastos totais e ficar entre 25% e 50%
 	da receita ideal de R$ {round(receita_ideal, 2)}), 
-    classifique a saúde financeira como ruim e dê 5 dicas de como a pessoa pode aumentar a receita. Formato de saída será de até 100 palavras. Finalize em seguida com o disclaimer.
+        classifique a saúde financeira como ruim e dê 5 dicas de como a pessoa pode aumentar a receita. Formato de saída será de até 100 palavras. Finalize em seguida com o disclaimer.
 
 	Se o valor da receita real (R$ {receita_real}) for maior que os gastos totais e ficar entre 50% e 75%
 	da receita ideal de R$ {round(receita_ideal, 2)}), 
-    classifique a saúde financeira como regular e dê 5 dicas de como a pessoa pode aumentar a receita. Formato de saída será de até 100 palavras. Finalize em seguida com o disclaimer.
+        classifique a saúde financeira como regular e dê 5 dicas de como a pessoa pode aumentar a receita. Formato de saída será de até 100 palavras. Finalize em seguida com o disclaimer.
 
-    Se o valor da receita real (R$ {receita_real}) for maior que os gastos totais e ficar entre 75% e 90%
+        Se o valor da receita real (R$ {receita_real}) for maior que os gastos totais e ficar entre 75% e 90%
 	da receita ideal de R$ {round(receita_ideal, 2)}), 
-    classifique a saúde financeira como boa e dê 5 dicas de como a pessoa pode aumentar a receita. Formato de saída será de até 100 palavras. Finalize em seguida com o disclaimer.
+        classifique a saúde financeira como boa e dê 5 dicas de como a pessoa pode aumentar a receita. Formato de saída será de até 100 palavras. Finalize em seguida com o disclaimer.
      
-    Agora se o valor da receita real (R$ {receita_real}) for maior que os gastos totais e for maior que 90%
+        Agora se o valor da receita real (R$ {receita_real}) for maior que os gastos totais e for maior que 90%
 	da receita ideal de R$ {round(receita_ideal, 2)}), classifique a saúde financeira como ótima e dê 3 dicas profissionais de alocação de recursos financeiros, para cada categoria, levando em consideração o resultado da tool 'grana_ideal', o perfil de investimento definido como {perfil_de_investimento}, 
 	o trabalho definido como {trabalho}, as horas trabalhadas no mês definidas como {horas_mes} e o hobby definido como {hobby}. 
-    Formato de saída será de até 300 palavras organizadas por categoria assim:
+        Formato de saída será de até 300 palavras organizadas por categoria assim:
     
-    ### Objetivos de curto, médio e longo prazo    
-    Disponível: R$ {round(receita_real * 0.20, 2)}
+        ### Objetivos de curto, médio e longo prazo    
+        Disponível: R$ {round(receita_real * 0.20, 2)}
      
-    Apresente aqui dicas financeiras para os objetivos de curto, médio e longo prazo 
-    de acordo com o objetivo da tool 'grana_ideal', perfil de investimento e trabalho da pessoa.
+        Apresente aqui dicas financeiras para os objetivos de curto, médio e longo prazo de acordo com o objetivo da tool 'grana_ideal', perfil de investimento e trabalho da pessoa.
     
-    ### Aposentadoria    
+        ### Aposentadoria    
 	Disponível: R$ {round(receita_real * 0.10, 2)}
     
-    Apresente aqui dicas financeiras para aposentadoria com base no perfil de investimento e trabalho da pessoa.
+        Apresente aqui dicas financeiras para aposentadoria com base no perfil de investimento e trabalho da pessoa.
     
-    ### Educação    
+        ### Educação    
 	Disponível: R$ {round(receita_real * 0.05, 2)}
 	 
 	Apresente aqui dicas financeiras para educação com base no perfil de investimento, trabalho e hobby da pessoa.
@@ -133,8 +132,7 @@ def saude_financeira(
 	### Gastos livres     
 	Disponível: R$ {round(receita_real * 0.10, 2)}
      
-	Apresente aqui dicas financeiras para gastos livres com base no perfil de investimento, trabalho, horas trabalhadas
-    e hobby da pessoa.
+	Apresente aqui dicas financeiras para gastos livres com base no perfil de investimento, trabalho, horas trabalhadas e hobby da pessoa.
 
 	## Disclaimer
 
