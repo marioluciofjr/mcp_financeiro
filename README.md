@@ -175,7 +175,7 @@ Contribuições são bem-vindas! Se você tem ideias para melhorar este projeto,
 
 ## Licença
 
-Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](https://github.com/marioluciofjr/mcp_content/blob/main/LICENSE) para detalhes.
+Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](https://github.com/marioluciofjr/mcp_financeiro/blob/main/LICENSE) para detalhes.
 
 ## Contato
     
