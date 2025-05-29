@@ -4,6 +4,7 @@
 ![license - MIT](https://img.shields.io/badge/license-MIT-green)
 ![site - prazocerto.me](https://img.shields.io/badge/site-prazocerto.me-230023)
 ![linkedin - @marioluciofjr](https://img.shields.io/badge/linkedin-marioluciofjr-blue)
+[![smithery badge](https://smithery.ai/badge/@marioluciofjr/mcp_financeiro)](https://smithery.ai/server/@marioluciofjr/mcp_financeiro)
 
 ## Índice
 
@@ -53,6 +54,14 @@ Este MCP-Server tem as seguintes classes:
 * Claude Desktop instalado.
 
 ## Como instalar no Claude Desktop
+
+### Installing via Smithery
+
+To install mcp_financeiro for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@marioluciofjr/mcp_financeiro):
+
+```bash
+npx -y @smithery/cli install @marioluciofjr/mcp_financeiro --client claude
+```
 
 Agora vou detalhar um passo a passo no Windows 11, utilizando o terminal (atalho `CTRL` + `J`) no VSCode: 
 
