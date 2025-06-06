@@ -43,7 +43,7 @@ Este MCP-Server tem as seguintes classes:
   <img align="center" height="60" width="80" src="https://github.com/user-attachments/assets/c0604008-f730-413f-9c4e-9b06c0912692" />&nbsp;&nbsp;&nbsp
   <img align="center" height="60" width="80" src="https://github.com/user-attachments/assets/76e7aca0-5321-4238-9742-164c20af5b4a" />&nbsp;&nbsp;&nbsp
   <img align="center" height="60" width="80" src="https://github.com/user-attachments/assets/cf957637-962d-4548-87d4-bbde91fadc22" />&nbsp;&nbsp;&nbsp
-  <img align="center" height="60" width="80" src="https://github.com/user-attachments/assets/18c95cc3-d8bc-486c-b0cf-b5d128980176" />&nbsp;&nbsp;&nbsp
+  <img align="center" height="60" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />&nbsp;&nbsp;&nbsp
   <img align="center" height="60" width="80" src="https://github.com/user-attachments/assets/abafaea5-eb57-4965-9130-7816280a8d84" />&nbsp;&nbsp;&nbsp; 
 </div>
 
