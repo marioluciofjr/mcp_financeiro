@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/marioluciofjr-mcp-financeiro-badge.png)](https://mseep.ai/app/marioluciofjr-mcp-financeiro)
+
 # mcp_financeiro
 
 [![Made with Python](https://img.shields.io/badge/Python->=3.10-blue?logo=python&logoColor=white)](https://python.org "Go to Python homepage")
